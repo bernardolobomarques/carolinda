@@ -44,9 +44,9 @@ const Encontros = () => {
                 <p>
                   Nossos encontros evoluíram do DCE para algo mais especial: um date 
                   em Copacabana! Entre o café e as conversas que fluíam naturalmente, 
-                  descobrimos que nossa conexão estava se aprofundando. Foi nesse cantinho 
-                  especial no <span className="hidden-bairro" onClick={handleBairroClick}>Jd</span>im 
-                  <span className="hidden-bairro2" onClick={handleBairroClick}>Botânico</span> 
+                  descobrimos que nossa conexão estava se aprofundando. Foi nesse lugar 
+                  especial em <span className="hidden-bairro" onClick={handleBairroClick}>Copa</span>
+                  <span className="hidden-bairro2" onClick={handleBairroClick}>cabana</span> 
                   que percebemos que queríamos mais momentos assim juntos.
                 </p>
               </div>

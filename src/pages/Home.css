@@ -1,0 +1,206 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFC0CB 50%, #F0E6FF 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 100px 1rem; /* Espaço extra para navbar */
+  position: relative;
+}
+
+.letter-paper {
+  background: #FFFEF7;
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 3px solid #E0BBE4;
+  position: relative;
+  background-image: 
+    linear-gradient(90deg, transparent 0%, transparent calc(100% - 1px), #E0BBE4 calc(100% - 1px)),
+    linear-gradient(180deg, transparent 0%, transparent calc(100% - 1px), #E0BBE4 calc(100% - 1px));
+  background-size: 30px 25px;
+  background-position: 40px 0;
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.letter-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #624F8A;
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(224, 187, 228, 0.3);
+}
+
+.letter-emoji {
+  font-size: 2rem;
+  animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.letter-content {
+  line-height: 1.8;
+  color: #624F8A;
+  font-size: 1.1rem;
+}
+
+.dear-carolina {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #957DAD;
+  margin-bottom: 1.5rem;
+}
+
+.letter-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.letter-signature {
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: #FF69B4;
+}
+
+.stickers {
+  position: absolute;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+.sticker-1 {
+  top: 20px;
+  right: 30px;
+  animation-delay: 0s;
+}
+
+.sticker-2 {
+  top: 120px;
+  left: 20px;
+  animation-delay: 1s;
+}
+
+.sticker-3 {
+  bottom: 150px;
+  right: 20px;
+  animation-delay: 2s;
+}
+
+.sticker-4 {
+  bottom: 50px;
+  left: 40px;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+.start-adventure-btn {
+  display: block;
+  margin: 3rem auto 0;
+  background: linear-gradient(145deg, #FF69B4, #957DAD);
+  border: none;
+  border-radius: 25px;
+  padding: 1.2rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.start-adventure-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.3rem;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .letter-paper {
+    padding: 1.5rem;
+    margin: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .letter-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .letter-content {
+    font-size: 0.9rem;
+  }
+  
+  .start-adventure-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  .sticker {
+    font-size: 1.2rem;
+  }
+  
+  /* Reduzir animações que podem distrair */
+  .sticker {
+    animation: none;
+    position: static;
+    display: inline-block;
+    margin: 0.2rem;
+  }
+  
+  .stickers {
+    position: static;
+    text-align: center;
+    margin: 1rem 0;
+  }
+}

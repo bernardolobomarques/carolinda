@@ -1,0 +1,397 @@
+.astrologia-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #E0BBE4 0%, #957DAD 30%, #624F8A 60%, #8B5A8C 100%);
+  padding: 1rem 1rem 100px 1rem; /* Espaço para navbar */
+  position: relative;
+  overflow: hidden;
+}
+
+.astrologia-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #FFD700;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.page-header h2 {
+  color: #E0BBE4;
+  font-size: 1.4rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.astro-circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 3rem auto;
+  border: 3px solid #FFD700;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent);
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.3),
+    inset 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.center-text h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700;
+}
+
+.center-text p {
+  font-size: 0.9rem;
+  color: #E0BBE4;
+  margin: 0;
+}
+
+.planet {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.planet:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.planet-symbol {
+  font-size: 1.5rem;
+  color: #624F8A;
+}
+
+.planet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.planet-info strong {
+  color: #624F8A;
+  font-size: 0.9rem;
+}
+
+.planet-info small {
+  color: #957DAD;
+  font-size: 0.7rem;
+}
+
+/* Posicionamento dos planetas */
+.sol {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lua {
+  top: 20%;
+  right: -20px;
+}
+
+.mercurio {
+  bottom: 20%;
+  right: -20px;
+}
+
+.venus {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.marte {
+  bottom: 20%;
+  left: -20px;
+}
+
+.jupiter {
+  top: 20%;
+  left: -20px;
+}
+
+.escorpiao-symbol,
+.escorpiao-symbol2 {
+  color: #FF4500;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+
+.escorpiao-symbol:hover,
+.escorpiao-symbol2:hover {
+  color: #FFD700;
+  text-shadow: 0 0 8px #FF4500;
+  transform: scale(1.2);
+}
+
+.hidden-libra {
+  color: #FF69B4;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 0 0.2rem;
+}
+
+.hidden-libra:hover {
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.compatibility-section {
+  margin: 4rem 0;
+}
+
+.compatibility-section h3 {
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.compatibility-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.compat-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #E0BBE4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.compat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.special-card {
+  border-color: #FFD700;
+  background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+.compat-card h4 {
+  color: #624F8A;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.compat-card p {
+  color: #624F8A;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.cosmic-quote {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cosmic-quote blockquote {
+  color: white;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cosmic-quote cite {
+  color: #FFD700;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.star-1 {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 20%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.star-3 {
+  top: 60%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.star-4 {
+  bottom: 30%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+.star-5 {
+  bottom: 20%;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.moon-emoji {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 3rem;
+  animation: gentle-glow 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes gentle-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .astrologia-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+  }
+  
+  .astro-circle {
+    width: 280px;
+    height: 280px;
+    margin: 2rem auto;
+  }
+  
+  .planet {
+    padding: 0.5rem 0.6rem;
+    border-radius: 12px;
+  }
+  
+  .planet-symbol {
+    font-size: 1.2rem;
+  }
+  
+  .planet-info strong {
+    font-size: 0.7rem;
+  }
+  
+  .planet-info small {
+    font-size: 0.6rem;
+  }
+  
+  /* Reposicionar planetas para mobile */
+  .sol { top: -5px; }
+  .lua { top: 15%; right: -15px; }
+  .mercurio { bottom: 15%; right: -15px; }
+  .venus { bottom: -5px; }
+  .marte { bottom: 15%; left: -15px; }
+  .jupiter { top: 15%; left: -15px; }
+  
+  .compatibility-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .compat-card {
+    padding: 1.2rem;
+  }
+  
+  .cosmic-quote {
+    padding: 1.2rem;
+  }
+  
+  .cosmic-quote blockquote {
+    font-size: 0.9rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .moon-emoji {
+    font-size: 1.8rem;
+  }
+  
+  /* Simplificar efeitos de fundo para melhor performance mobile */
+  .stars-background {
+    opacity: 0.5; /* Reduzir opacidade para não atrapalhar leitura */
+  }
+  
+  .star {
+    font-size: 1rem;
+    animation: none; /* Remover animação para melhor performance */
+  }
+}

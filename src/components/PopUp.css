@@ -1,0 +1,96 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popup-content {
+  background: linear-gradient(145deg, #FFC0CB, #E0BBE4);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 350px;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  animation: popupAppear 0.3s ease-out;
+}
+
+@keyframes popupAppear {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.popup-emoji {
+  font-size: 1.5rem;
+}
+
+.popup-content h3 {
+  margin: 0;
+  color: #624F8A;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.popup-content p {
+  color: #624F8A;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.popup-counter {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 2px solid white;
+}
+
+.counter-text {
+  color: #624F8A;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.popup-close {
+  background: linear-gradient(145deg, #FF69B4, #957DAD);
+  border: none;
+  border-radius: 15px;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+}
+
+.popup-close:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

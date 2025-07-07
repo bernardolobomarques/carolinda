@@ -1,0 +1,366 @@
+.tatuagens-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFC0CB 0%, #FFE4E6 50%, #F8E8EA 100%);
+  padding: 1rem 1rem 100px 1rem; /* Espaço para navbar */
+  position: relative;
+}
+
+.tatuagens-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #624F8A;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.page-header h2 {
+  color: #957DAD;
+  font-size: 1.4rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.tattoo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.tattoo-canvas {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid #E0BBE4;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(149, 125, 173, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.tattoo-canvas h3 {
+  text-align: center;
+  color: #624F8A;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tattoo-design {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  border: 2px solid #FFC0CB;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tattoo-design:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #FF69B4;
+}
+
+.design-sketch {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: rgba(248, 232, 234, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #E0BBE4;
+  box-shadow: inset 0 0 20px rgba(255, 192, 203, 0.3);
+}
+
+.moon-crescent {
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.star-companion {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  animation: twinkle-star 2s ease-in-out infinite;
+}
+
+.butterfly {
+  font-size: 2.5rem;
+  animation: flutter 3s ease-in-out infinite;
+}
+
+.butterfly-2 {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  font-size: 2rem;
+  animation-delay: 1s;
+}
+
+.hidden-number {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #FF69B4;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.butterflies-design:hover .hidden-number {
+  opacity: 1;
+  transform: scale(1.2);
+  background: #FFD700;
+  color: white;
+}
+
+@keyframes twinkle-star {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+@keyframes flutter {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(2deg); }
+  75% { transform: translateY(2px) rotate(-1deg); }
+}
+
+.design-info {
+  flex: 1;
+  color: #624F8A;
+}
+
+.design-info h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #957DAD;
+  font-family: 'Dancing Script', cursive;
+}
+
+.design-info p {
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.personal-meaning {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid #FFC0CB;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-meaning h3 {
+  text-align: center;
+  color: #624F8A;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.meaning-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.meaning-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #E0BBE4;
+  transition: all 0.3s ease;
+}
+
+.meaning-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.meaning-card h4 {
+  color: #624F8A;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+.meaning-card p {
+  color: #624F8A;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.supportive-message {
+  background: linear-gradient(145deg, rgba(255, 105, 180, 0.2), rgba(224, 187, 228, 0.2));
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  border: 3px solid #FF69B4;
+}
+
+.message-content h3 {
+  color: #624F8A;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.message-content p {
+  color: #624F8A;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-flower,
+.floating-sparkle {
+  position: absolute;
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.flower-1 {
+  top: 15%;
+  left: 10%;
+  font-size: 2rem;
+  animation-delay: 0s;
+}
+
+.flower-2 {
+  top: 70%;
+  right: 15%;
+  font-size: 1.8rem;
+  animation-delay: 2s;
+}
+
+.sparkle-1 {
+  top: 30%;
+  right: 10%;
+  font-size: 1.5rem;
+  animation-delay: 1s;
+}
+
+.sparkle-2 {
+  bottom: 40%;
+  left: 15%;
+  font-size: 1.3rem;
+  animation-delay: 3s;
+}
+
+.sparkle-3 {
+  top: 60%;
+  left: 50%;
+  font-size: 1.2rem;
+  animation-delay: 1.5s;
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+    opacity: 1;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .tatuagens-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+  }
+  
+  .tattoo-design {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+  
+  .design-sketch {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .moon-crescent {
+    font-size: 2.2rem;
+  }
+  
+  .butterfly {
+    font-size: 2rem;
+  }
+  
+  .meaning-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .tattoo-canvas {
+    padding: 1.5rem;
+  }
+  
+  .personal-meaning {
+    padding: 1.5rem;
+  }
+  
+  .supportive-message {
+    padding: 1.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Simplificar elementos flutuantes */
+  .floating-elements {
+    opacity: 0.3; /* Reduzir opacidade para não atrapalhar */
+  }
+  
+  .floating-flower,
+  .floating-sparkle {
+    animation: none; /* Remover animações para melhor performance */
+    font-size: 1.2rem;
+  }
+}

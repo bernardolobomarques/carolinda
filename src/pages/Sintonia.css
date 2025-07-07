@@ -1,0 +1,323 @@
+.sintonia-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFC0CB 0%, #E0BBE4 50%, #957DAD 100%);
+  padding: 1rem 1rem 100px 1rem; /* Espaço para navbar */
+  position: relative;
+}
+
+.sintonia-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.page-header h2 {
+  color: #624F8A;
+  font-size: 1.4rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.mirror-section {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.silhouettes {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.silhouette {
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(145deg, #624F8A, #957DAD);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.silhouette::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #624F8A, #957DAD);
+  border-radius: 50%;
+}
+
+/* Estilos específicos para silhuetas masculina e feminina */
+.silhouette-male {
+  background: linear-gradient(145deg, #4A90E2, #5DADE2);
+}
+
+.silhouette-male::before {
+  background: linear-gradient(145deg, #4A90E2, #5DADE2);
+}
+
+.silhouette-female {
+  background: linear-gradient(145deg, #FF69B4, #FFB6C1);
+}
+
+.silhouette-female::before {
+  background: linear-gradient(145deg, #FF69B4, #FFB6C1);
+}
+
+/* Animações sutis para diferenciar mais as silhuetas */
+.silhouette-male {
+  animation: gentle-blue-glow 3s ease-in-out infinite alternate;
+}
+
+.silhouette-female {
+  animation: gentle-pink-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes gentle-blue-glow {
+  from { box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3); }
+  to { box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5); }
+}
+
+@keyframes gentle-pink-glow {
+  from { box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3); }
+  to { box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5); }
+}
+
+.mirror-line {
+  width: 4px;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #FFD700, transparent);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mirror-line:hover {
+  transform: scaleY(1.1);
+  background: linear-gradient(to bottom, transparent, #FFF, transparent);
+}
+
+.hidden-phrase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #624F8A;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFD700;
+}
+
+.mirror-line:hover .hidden-phrase {
+  opacity: 1;
+}
+
+.content-text {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+  line-height: 1.8;
+  color: #624F8A;
+  font-size: 1.1rem;
+}
+
+.content-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.hidden-nickname {
+  color: #FF69B4;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hidden-nickname:hover {
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.floating-emojis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: float-around 6s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+.emoji-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.emoji-2 {
+  top: 30%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.emoji-3 {
+  top: 60%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.emoji-4 {
+  top: 70%;
+  right: 25%;
+  animation-delay: 3s;
+}
+
+.emoji-5 {
+  top: 80%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float-around {
+  0%, 100% { 
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px) rotate(5deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-10px) translateX(-5px) rotate(-3deg);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-30px) translateX(15px) rotate(8deg);
+    opacity: 0.9;
+  }
+}
+
+.stickers-sintonia {
+  position: absolute;
+  bottom: 10rem;
+  right: 2rem;
+}
+
+.sticker-matching,
+.sticker-soulmates {
+  background: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #624F8A;
+  border: 2px solid #E0BBE4;
+  transform: rotate(-5deg);
+  animation: sticker-float 3s ease-in-out infinite;
+}
+
+.sticker-soulmates {
+  transform: rotate(8deg);
+  animation-delay: 1.5s;
+  margin-left: -1rem;
+}
+
+@keyframes sticker-float {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-5deg) translateY(-5px); }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .sintonia-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .silhouettes {
+    gap: 0.8rem;
+    padding: 1.2rem;
+  }
+  
+  .silhouette {
+    width: 50px;
+    height: 75px;
+  }
+  
+  .silhouette::before {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .content-text {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+  }
+  
+  /* Simplificar emojis flutuantes para mobile */
+  .floating-emojis {
+    display: none; /* Remove emojis flutuantes que podem atrapalhar */
+  }
+  
+  .stickers-sintonia {
+    position: static;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .sticker-matching,
+  .sticker-soulmates {
+    display: inline-block;
+    margin: 0.3rem;
+    transform: none !important;
+    animation: none;
+  }
+}

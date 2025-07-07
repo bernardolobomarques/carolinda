@@ -1,0 +1,446 @@
+.junina-container {
+  min-height: 100vh;
+  background: 
+    linear-gradient(45deg, transparent 25%, rgba(255, 192, 203, 0.1) 25%, rgba(255, 192, 203, 0.1) 50%, transparent 50%, transparent 75%, rgba(224, 187, 228, 0.1) 75%),
+    linear-gradient(-45deg, transparent 25%, rgba(161, 130, 180, 0.1) 25%, rgba(161, 130, 180, 0.1) 50%, transparent 50%, transparent 75%, rgba(255, 192, 203, 0.1) 75%),
+    linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 30%, #FFB6C1 60%, #DDA0DD 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  padding: 1rem 1rem 100px 1rem; /* Espaço para navbar */
+  position: relative;
+}
+
+.junina-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #8B4513;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.page-header h2 {
+  color: #CD853F;
+  font-size: 1.4rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.festa-decorations {
+  margin-bottom: 3rem;
+}
+
+.bandeirinhas {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.bandeirinha {
+  width: 40px;
+  height: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.bandeirinha::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid;
+}
+
+.bandeirinha::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid;
+}
+
+.bandeirinha.rosa::before { border-top-color: #FFC0CB; }
+.bandeirinha.rosa::after { border-bottom-color: #FFC0CB; }
+
+.bandeirinha.roxo::before { border-top-color: #E0BBE4; }
+.bandeirinha.roxo::after { border-bottom-color: #E0BBE4; }
+
+.bandeirinha.violeta::before { border-top-color: #CBAACB; }
+.bandeirinha.violeta::after { border-bottom-color: #CBAACB; }
+
+.bandeirinha.amarelo::before { border-top-color: #FFD700; }
+.bandeirinha.amarelo::after { border-bottom-color: #FFD700; }
+
+.bandeirinha.laranja::before { border-top-color: #FFA500; }
+.bandeirinha.laranja::after { border-bottom-color: #FFA500; }
+
+.arraial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.festa-description {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid #CD853F;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.festa-description h3 {
+  color: #8B4513;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.festa-description p {
+  color: #8B4513;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.elementos-juninos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.elemento-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #DDA0DD;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.elemento-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.elemento-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.elemento-item h4 {
+  color: #8B4513;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.elemento-item p {
+  color: #8B4513;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.data-especial {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid #FFD700;
+  text-align: center;
+}
+
+.data-especial h3 {
+  color: #8B4513;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.calendario-junino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.data-card {
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+}
+
+.data-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.data-numero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.data-mes {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.data-santo {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.data-significado {
+  color: #8B4513;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.baloes-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid #FF69B4;
+  text-align: center;
+}
+
+.baloes-section h3 {
+  color: #8B4513;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.baloes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.balao {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: float-balloon 3s ease-in-out infinite;
+  margin: 0 1rem;
+}
+
+.balao:hover {
+  transform: scale(1.2);
+}
+
+.balao-1 {
+  animation-delay: 0s;
+}
+
+.balao-2 {
+  animation-delay: 1s;
+}
+
+.balao-3 {
+  animation-delay: 2s;
+}
+
+@keyframes float-balloon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.baloes-text {
+  color: #8B4513;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.frutas-juninas {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #FF1493;
+  text-align: center;
+}
+
+.frutas-decoracao {
+  margin-bottom: 1.5rem;
+}
+
+.fruta {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  animation: bounce-fruit 2s ease-in-out infinite;
+}
+
+.fruta:nth-child(1) { animation-delay: 0s; }
+.fruta:nth-child(2) { animation-delay: 0.2s; }
+.fruta:nth-child(3) { animation-delay: 0.4s; }
+.fruta:nth-child(4) { animation-delay: 0.6s; }
+.fruta:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes bounce-fruit {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.frutas-text {
+  color: #8B4513;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quadrilha-message {
+  text-align: center;
+}
+
+.message-box {
+  background: linear-gradient(145deg, rgba(255, 192, 203, 0.3), rgba(224, 187, 228, 0.3));
+  padding: 3rem;
+  border-radius: 20px;
+  border: 3px solid #8B4513;
+  position: relative;
+}
+
+.message-box h3 {
+  color: #8B4513;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.message-box p {
+  color: #8B4513;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.chapeu-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-top: 1rem;
+  animation: tip-hat 2s ease-in-out infinite;
+}
+
+@keyframes tip-hat {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .junina-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+  }
+  
+  .elementos-juninos {
+    grid-template-columns: 1fr;
+  }
+  
+  .bandeirinhas {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+  
+  .bandeirinha {
+    width: 30px;
+    height: 40px;
+  }
+  
+  .festa-description {
+    padding: 1.5rem;
+  }
+  
+  .data-especial {
+    padding: 1.5rem;
+  }
+  
+  .baloes-section {
+    padding: 1.5rem;
+  }
+  
+  .message-box {
+    padding: 1.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .data-numero {
+    font-size: 1.8rem;
+  }
+  
+  .balao {
+    font-size: 2rem;
+    animation: none; /* Simplificar animações para mobile */
+  }
+  
+  .elemento-icon {
+    font-size: 2.2rem;
+  }
+  
+  .chapeu-emoji {
+    font-size: 2.2rem;
+    animation: none; /* Simplificar animação */
+  }
+  
+  .fruta {
+    font-size: 1.5rem;
+    animation: none; /* Simplificar animação para melhor performance */
+  }
+}

@@ -1,0 +1,307 @@
+.vagas-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #E0BBE4 0%, #CBAACB 50%, #A182B4 100%);
+  padding: 1rem 1rem 100px 1rem; /* Espaço para navbar */
+  position: relative;
+}
+
+.vagas-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.page-header h2 {
+  color: #624F8A;
+  font-size: 1.4rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.document-paper {
+  background: #FFFEF7;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 3px solid #957DAD;
+  position: relative;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 24px,
+      rgba(149, 125, 173, 0.1) 24px,
+      rgba(149, 125, 173, 0.1) 25px
+    );
+}
+
+.document-header {
+  text-align: center;
+  border-bottom: 3px solid #E0BBE4;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.document-header h3 {
+  color: #624F8A;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.document-subtitle {
+  color: #957DAD;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.vaga-principal {
+  background: linear-gradient(145deg, rgba(255, 192, 203, 0.3), rgba(224, 187, 228, 0.3));
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  border: 2px solid #FFC0CB;
+}
+
+.vaga-principal h4 {
+  color: #624F8A;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vaga-details {
+  color: #624F8A;
+  line-height: 1.6;
+}
+
+.vaga-details p {
+  margin-bottom: 1rem;
+}
+
+.vaga-details ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vaga-details li {
+  margin-bottom: 0.5rem;
+}
+
+.input-section {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  border: 2px solid #E0BBE4;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: #624F8A;
+}
+
+.vaga-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #E0BBE4;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+  color: #624F8A;
+}
+
+.vaga-input:focus {
+  outline: none;
+  border-color: #FF69B4;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.submit-btn {
+  background: linear-gradient(145deg, #FF69B4, #957DAD);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.vagas-secundarias {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.vaga-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 2px solid #E0BBE4;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #624F8A;
+}
+
+.vaga-card h4 {
+  color: #957DAD;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #FFC0CB;
+  padding-bottom: 0.5rem;
+}
+
+.vaga-card ul {
+  margin-left: 1.5rem;
+}
+
+.vaga-card li {
+  margin-bottom: 0.5rem;
+}
+
+.hidden-opala,
+.hidden-opala2 {
+  color: #FF69B4;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hidden-opala:hover,
+.hidden-opala2:hover {
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  padding: 0.2rem 0.3rem;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.document-footer {
+  text-align: center;
+  border-top: 3px solid #E0BBE4;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-text {
+  color: #957DAD;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.office-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 2rem;
+  animation: office-float 4s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.star-1 {
+  top: 15%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.heart-1 {
+  top: 25%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.star-2 {
+  bottom: 25%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.heart-2 {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: 3s;
+}
+
+@keyframes office-float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-15px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .vagas-container {
+    padding: 1rem 0.8rem 100px 0.8rem;
+  }
+  
+  .document-paper {
+    padding: 1.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .document-header h3 {
+    font-size: 1.4rem;
+  }
+  
+  .vaga-principal {
+    padding: 1.2rem;
+  }
+  
+  .vaga-card {
+    padding: 1.2rem;
+  }
+  
+  .input-section {
+    padding: 1rem;
+  }
+  
+  /* Simplificar decorações flutuantes */
+  .office-decorations {
+    display: none; /* Remove decorações que podem atrapalhar a leitura */
+  }
+}
